@@ -1,0 +1,12 @@
+[package]
+name = "rust-graphics-hello-triangle"
+version = "0.1.0"
+authors = ["Hossein Noroozpour <hossein.noroozpour@gmail.com>"]
+
+[dependencies]
+rust_graphics_log = {version = "*", path="../rust-graphics-log"}
+
+[lib]
+path = "src/lib.rs"
+name = "rust_graphics_lib"
+crate-type = ["staticlib"]
