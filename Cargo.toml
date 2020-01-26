@@ -6,7 +6,7 @@ authors = ["Hossein Noroozpour <hossein.noroozpour@gmail.com>"]
 [dependencies]
 rust_graphics_log = { version = "*", path = "../rust-graphics-log" }
 rust_graphics_main = { version = "*", path = "../rust-graphics-main" }
-# rust_graphics_window = { version = "*", path = "../rust-graphics-window" }
+rust_graphics_window = { version = "*", path = "../rust-graphics-window" }
 
 [lib]
 path = "src/main.rs"

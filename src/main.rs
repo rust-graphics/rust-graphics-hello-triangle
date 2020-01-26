@@ -1,11 +1,12 @@
 extern crate rust_graphics_log as log;
 extern crate rust_graphics_main as main;
-// extern crate rust_graphics_window as window;
+extern crate rust_graphics_window as window;
 
 use {
-    self::log::{log_i, result_f},
+    self::log::log_i, // result_f},
+    // std::sync::{Arc, RwLock},
+    self::window::create_window,
     main::main,
-    std::sync::{Arc, RwLock},
 };
 
 // struct Listener {
@@ -37,5 +38,6 @@ use {
 // }
 
 main! {{
+    let mut win = create_window!();
     log_i!("Program ended.");
 }}
