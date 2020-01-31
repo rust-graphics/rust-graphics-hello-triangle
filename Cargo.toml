@@ -4,11 +4,13 @@ version = "0.1.0"
 authors = ["Hossein Noroozpour <hossein.noroozpour@gmail.com>"]
 
 [dependencies]
-rust_graphics_log = { version = "*", path = "../rust-graphics-log" }
+rust_graphics_gl = { version = "*", path = "../rust-graphics-gl" }
 rust_graphics_main = { version = "*", path = "../rust-graphics-main" }
-rust_graphics_window = { version = "*", path = "../rust-graphics-window", features = ["verbose_log"] }
 
 [lib]
 path = "src/main.rs"
 name = "rust_graphics_lib"
 crate-type = ["staticlib"]
+
+[features]
+verbose_log = ["rust_graphics_gl/verbose_log"]
