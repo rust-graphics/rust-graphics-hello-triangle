@@ -32,7 +32,7 @@ impl EventListener for Listener {
 }
 
 fn start(arg: Arg) {
-    let w = Arc::new(Window::new(arg));
+    let w = Window::new(arg);
     let listener = Arc::new(RwLock::new(Listener { running: true }));
     let l: Arc<RwLock<dyn EventListener>> = listener.clone();
     w.get_event_engine().add(0, Arc::downgrade(&l));
