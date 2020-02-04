@@ -23,7 +23,7 @@ impl EventListener for Listener {
         match event.get_data() {
             &EventData::Quit => self.running = false,
             _e @ _ => {
-                #[cfg(feature = "verbose_log")]
+                #[cfg(feature = "verbose-log")]
                 log_i!("{:?}", _e);
             }
         }
